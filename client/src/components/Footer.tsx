@@ -6,7 +6,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-primary dark:bg-[oklch(0.177_0_0)] text-primary-foreground 
+    ">
       <div className="container py-12 md:py-16">
         {/* Grid de Conteúdo */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">

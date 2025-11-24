@@ -6,7 +6,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { APP_LOGO } from "@/const";
+import { APP_LOGO, APP_LOGO_DARK } from "@/const";
 
 interface HeaderProps {
   onNavClick?: (section: string) => void;
@@ -29,16 +29,25 @@ export default function Header({ onNavClick }: HeaderProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b border-border shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-white dark:bg-[rgb(10,10,10)] border-b border-border shadow-sm">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        {/* Logo */}
+        {/* --- MUDANÇA NO LOGO AQUI --- */}
         <div className="flex items-center gap-2 flex-shrink-0">
+          {/* Logo Light: Some no modo dark (dark:hidden) */}
           <img
             src={APP_LOGO}
             alt="Archio"
-            className="h-10 md:h-12 w-auto"
+            className="h-10 md:h-12 w-auto dark:hidden" 
+          />
+          
+          {/* Logo Dark: Escondido por padrão (hidden), aparece no dark (dark:block) */}
+          <img
+            src={APP_LOGO_DARK}
+            alt="Archio"
+            className="h-10 md:h-12 w-auto hidden dark:block"
           />
         </div>
+        {/* ---------------------------- */}
 
         {/* Navegação Desktop */}
         <nav className="hidden md:flex items-center gap-8">
