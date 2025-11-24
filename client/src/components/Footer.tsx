@@ -82,15 +82,15 @@ export default function Footer() {
             <ul className="space-y-2 text-sm opacity-90">
               <li>
                 <a href="mailto:contato@archio.com.br" className="hover:opacity-100 transition-opacity">
-                  contato@archio.com.br
+                  suporte@archio.com.br
                 </a>
               </li>
               <li>
                 <a href="tel:+5511999999999" className="hover:opacity-100 transition-opacity">
-                  +55 (11) 9999-9999
+                  +55 (34) 99693-5800
                 </a>
               </li>
-              <li>São Paulo, SP</li>
+              <li>Uberaba, MG</li>
             </ul>
           </div>
         </div>

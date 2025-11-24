@@ -10,9 +10,13 @@ import Carousel from "@/components/Carousel";
 import { CheckCircle2, Settings, Zap, Lock, Database, Users, Star } from "lucide-react";
 
 const carouselItems = [
+  { type: "video" as const, src: "/WhatsAppVideo2025-11-21at12.46.34.mp4", alt: "Vídeo 2" },
   { type: "image" as const, src: "/site_2_gestao_processos.png", alt: "Gestão de Processos" },
   { type: "video" as const, src: "/WhatsAppVideo2025-11-21at12.46.47.mp4", alt: "Vídeo 1" },
-  { type: "video" as const, src: "/WhatsAppVideo2025-11-21at12.46.34.mp4", alt: "Vídeo 2" },
+  { type: "image" as const, src: "/site_3_gestao_contratos.png", alt: "Gestão de Contratos" },
+  { type: "image" as const, src: "/site_4_automacao_processos.png", alt: "Automação de Processos" },
+  { type: "image" as const, src: "/site_5_analise_informacoes.png", alt: "Análise de Informações" },
+
 ];
 
 const destaques = [
@@ -133,7 +137,7 @@ export default function Home() {
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="/site_2_gestao_processos.png"
+                  src="/gestao_documentos.jpg"
                   alt="Gestão de Documentos"
                   className="w-full h-auto object-cover"
                 />
@@ -177,7 +181,7 @@ export default function Home() {
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="/site_2_gestao_processos.png"
+                  src="/site_3_gestao_contratos.png"
                   alt="Gestão de Contratos"
                   className="w-full h-auto object-cover"
                 />
@@ -203,7 +207,7 @@ export default function Home() {
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="/site_2_gestao_processos.png"
+                  src="/site_4_automacao_processos.png"
                   alt="Automação com IA"
                   className="w-full h-auto object-cover"
                 />
@@ -213,7 +217,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="rounded-lg overflow-hidden shadow-lg order-2 md:order-1">
                 <img
-                  src="/site_2_gestao_processos.png"
+                  src="/site_5_analise_informacoes.png"
                   alt="Análise com IA"
                   className="w-full h-auto object-cover"
                 />
