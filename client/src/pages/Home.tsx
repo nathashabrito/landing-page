@@ -107,7 +107,7 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">
                 Gestão Inteligente de Informações
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-1xl">
                 Archio é uma solução em nuvem que traz conceitos inovadores na gestão de documentos, processos e contratos.
               </p>
             </div>
