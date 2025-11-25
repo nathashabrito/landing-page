@@ -230,7 +230,7 @@ importers:
       vite:
         specifier: ^7.1.7
         version: 7.1.9(@types/node@24.7.0)(jiti@2.6.1)(lightningcss@1.30.1)(tsx@4.20.6)
-      vite-plugin-manus-runtime:
+      vite-plugin---runtime:
         specifier: ^0.0.56
         version: 0.0.56
       vitest:
@@ -3409,7 +3409,7 @@ packages:
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
 
-  vite-plugin-manus-runtime@0.0.56:
+  vite-plugin---runtime@0.0.56:
     resolution: {integrity: sha512-BkRMoFzUtT5enXBl+PO0h81KH+4uK4WpLGOp1tvljafb6fp9UX0b1klfxQz9QZFEdB8IPQTEkNzfqv09fHrkMw==}
 
   vite@5.4.20:
@@ -7118,7 +7118,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-manus-runtime@0.0.56:
+  vite-plugin---runtime@0.0.56:
     dependencies:
       '@medv/finder': 4.0.2
       clsx: 2.1.1
