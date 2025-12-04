@@ -27,11 +27,11 @@ const carouselItems = [
     src: "/site_2_gestao_processos.png",
     alt: "Gestão de Processos",
   },
-  {
-    type: "video" as const,
-    src: "/WhatsAppVideo2025-11-21at12.46.47.mp4",
-    alt: "Vídeo 1",
-  },
+  // {
+  //   type: "video" as const,
+  //   src: "/WhatsAppVideo2025-11-21at12.46.47.mp4",
+  //   alt: "Vídeo 1",
+  // },
   {
     type: "image" as const,
     src: "/site_3_gestao_contratos.png",
@@ -134,12 +134,11 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-background">
       <Header onNavClick={handleNavClick} />
 
-      <main className="flex-1">
+      <main className="flex-1 w-full">
         {/* 1. Hero Section com Carrossel */}
-        <section className="py-12 md:py-20 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container">
-            <Carousel items={carouselItems} autoPlayInterval={6000} />
-          </div>
+        {/* Removido padding vertical e container para full-width */}
+        <section className="w-full bg-background pb-12">
+           <Carousel items={carouselItems} autoPlayInterval={6000} />
         </section>
 
         {/* Wrapper para âncora de Produtos */}
@@ -433,7 +432,7 @@ export default function Home() {
                     {[...Array(cliente.avaliacao)].map((_, j) => (
                       <Star
                         key={j}
-                        className="w-4 h-4 fill-accent text-accent"
+                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
                       />
                     ))}
                   </div>
