@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Carousel from "@/components/Carousel";
@@ -136,113 +135,126 @@ export default function Home() {
       <Header onNavClick={handleNavClick} />
 
       <main className="flex-1">
-        {/* Hero Section com Carrossel */}
+        {/* 1. Hero Section com Carrossel */}
         <section className="py-12 md:py-20 bg-gradient-to-b from-primary/5 to-background">
           <div className="container">
-            <div className="mb-8">
-              <Badge className="mb-4 bg-primary/20 text-primary dark:text-[oklch(0.90_0_0)] hover:bg-primary/30">
-                Solução em Nuvem
-              </Badge>
-
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary dark:text-[oklch(0.90_0_0)] mb-4">
-                Gestão Inteligente de Informações
-              </h1>
-
-              <p className="text-lg md:text-xl text-muted-foreground dark:text-[oklch(0.90_0_0)] max-w-1xl">
-                Archio é uma solução em nuvem que traz conceitos inovadores na
-                gestão de documentos, processos e contratos.
-              </p>
-            </div>
             <Carousel items={carouselItems} autoPlayInterval={6000} />
           </div>
         </section>
 
-        {/* Seção Produtos */}
-        <section ref={produtosRef} className="py-16 md:py-24">
+        {/* Wrapper para âncora de Produtos */}
+        <div ref={produtosRef} className="pt-16 md:pt-24">
           <div className="container">
             <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-[oklch(0.90_0_0)] mb-12 text-center">
               Nossas Soluções
             </h2>
-
-            {/* Gestão de Documentos */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-primary dark:text-[oklch(0.90_0_0)] mb-4">
-                  Gestão de Documentos Inteligente
-                </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Gerencie suas informações, sejam documentos físicos ou
-                  eletrônicos, de forma a permitir sua preservação e recuperação
-                  imediata.
-                </p>
-                <Button className="bg-primary hover:bg-primary/90">
-                  Saiba Mais
-                </Button>
-              </div>
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img
-                  src="/gestao_documentos.jpg"
-                  alt="Gestão de Documentos"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Gestão de Processos */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 items-center">
-              <div className="rounded-lg overflow-hidden shadow-lg  order-2 md:order-1">
-                <img
-                  src="/site_2_gestao_processos.png"
-                  alt="Gestão de Processos"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div className="order-1 md:order-2">
-                <h3 className="text-2xl font-bold text-primary dark:text-[oklch(0.90_0_0)] mb-4">
-                  Gestão de Processos (Workflows)
-                </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Automatize e gerencie cada etapa de seus processos, mantenha
-                  registros das operações, identifique gargalos e ganhe
-                  produtividade.
-                </p>
-                <Button className="bg-primary hover:bg-primary/90">
-                  Saiba Mais
-                </Button>
-              </div>
-            </div>
-
-            {/* Gestão de Contratos */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-primary dark:text-[oklch(0.90_0_0)] mb-4">
-                  Gestão de Contratos
-                </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Colete assinaturas (eSignature), gerencie e armazene seus
-                  contratos, permitindo controlar seu ciclo de vida, a rápida
-                  recuperação e preservação dos contratos.
-                </p>
-                <Button className="bg-primary hover:bg-primary/90">
-                  Saiba Mais
-                </Button>
-              </div>
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img
-                  src="/site_3_gestao_contratos.png"
-                  alt="Gestão de Contratos"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </div>
           </div>
-        </section>
 
-        {/* Seção IA */}
-        <section className="py-16 md:py-24 bg-primary/5">
+          {/* 2. ITEM 1: Gestão de Documentos (Branco) -> Imagem ESQUERDA | Texto DIREITA */}
+          <section className="py-12 md:py-20">
+            <div className="container">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                {/* Texto (Direita no Desktop) */}
+                <div className="order-1 md:order-2">
+                  <h3 className="text-2xl font-bold text-primary dark:text-[oklch(0.90_0_0)] mb-4">
+                    Gestão de Documentos Inteligente
+                  </h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Gerencie suas informações, sejam documentos físicos ou
+                    eletrônicos, de forma a permitir sua preservação e
+                    recuperação imediata.
+                  </p>
+                  <Button className="bg-primary hover:bg-primary/90">
+                    Saiba Mais
+                  </Button>
+                </div>
+                {/* Imagem (Esquerda no Desktop) */}
+                <div className="rounded-lg overflow-hidden shadow-lg order-2 md:order-1">
+                  <img
+                    src="/gestao_documentos.jpg"
+                    alt="Gestão de Documentos"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 3. ITEM 2: Gestão de Processos (Colorido) -> Texto ESQUERDA | Imagem DIREITA */}
+          <section className="py-12 md:py-20 bg-primary/5 dark:bg-white/5">
+            <div className="container">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                {/* Imagem (Direita no Desktop) */}
+                <div className="rounded-lg overflow-hidden shadow-lg order-1 md:order-2">
+                  <img
+                    src="/site_2_gestao_processos.png"
+                    alt="Gestão de Processos"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                {/* Texto (Esquerda no Desktop) */}
+                <div className="order-2 md:order-1">
+                  <h3 className="text-2xl font-bold text-primary dark:text-[oklch(0.90_0_0)] mb-4">
+                    Gestão de Processos (Workflows)
+                  </h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Automatize e gerencie cada etapa de seus processos, mantenha
+                    registros das operações, identifique gargalos e ganhe
+                    produtividade.
+                  </p>
+                  <Button className="bg-primary hover:bg-primary/90">
+                    Saiba Mais
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 4. ITEM 3: Gestão de Contratos (Branco) -> Imagem ESQUERDA | Texto DIREITA (CORRIGIDO) */}
+          <section className="py-12 md:py-20">
+            <div className="container">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                {/* Texto (Direita no Desktop) */}
+                <div className="order-1 md:order-2">
+                  <h3 className="text-2xl font-bold text-primary dark:text-[oklch(0.90_0_0)] mb-4">
+                    Gestão de Contratos
+                  </h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Colete assinaturas (eSignature), gerencie e armazene seus
+                    contratos, permitindo controlar seu ciclo de vida, a rápida
+                    recuperação e preservação dos contratos.
+                  </p>
+                  <Button className="bg-primary hover:bg-primary/90">
+                    Saiba Mais
+                  </Button>
+                </div>
+                {/* Imagem (Esquerda no Desktop) */}
+                <div className="rounded-lg overflow-hidden shadow-lg order-2 md:order-1">
+                  <img
+                    src="/site_3_gestao_contratos.png"
+                    alt="Gestão de Contratos"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        {/* 5. IA Parte 1: Automação (Colorido) -> Texto ESQUERDA | Imagem DIREITA (AJUSTADO) */}
+        <section className="py-12 md:py-20 bg-primary/5 dark:bg-white/5">
           <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              {/* Imagem (Direita no Desktop) */}
+              <div className="rounded-lg overflow-hidden shadow-lg order-1 md:order-2">
+                <img
+                  src="/site_4_automacao_processos.png"
+                  alt="Automação com IA"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              {/* Texto (Esquerda no Desktop) */}
+              <div className="order-2 md:order-1">
                 <h3 className="text-2xl font-bold text-primary dark:text-[oklch(0.90_0_0)] mb-4">
                   Automação de Processos com Inteligência Artificial
                 </h3>
@@ -255,23 +267,15 @@ export default function Home() {
                   Explorar IA
                 </Button>
               </div>
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img
-                  src="/site_4_automacao_processos.png"
-                  alt="Automação com IA"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
             </div>
+          </div>
+        </section>
 
+        {/* 6. IA Parte 2: Análise (Branco) -> Imagem ESQUERDA | Texto DIREITA (AJUSTADO) */}
+        <section className="py-12 md:py-20">
+          <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="rounded-lg overflow-hidden shadow-lg order-2 md:order-1">
-                <img
-                  src="/site_5_analise_informacoes.png"
-                  alt="Análise com IA"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+              {/* Texto (Direita no Desktop) */}
               <div className="order-1 md:order-2">
                 <h3 className="text-2xl font-bold text-primary dark:text-[oklch(0.90_0_0)] mb-4">
                   Analise Suas Informações com Inteligência Artificial
@@ -285,12 +289,20 @@ export default function Home() {
                   Saiba Mais
                 </Button>
               </div>
+              {/* Imagem (Esquerda no Desktop) */}
+              <div className="rounded-lg overflow-hidden shadow-lg order-2 md:order-1">
+                <img
+                  src="/site_5_analise_informacoes.png"
+                  alt="Análise com IA"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Seção Destaques */}
-        <section className="py-16 md:py-24">
+        {/* 7. Seção Destaques (Colorido) */}
+        <section className="py-16 md:py-24 bg-primary/5 dark:bg-white/5">
           <div className="container">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 dark:text-[oklch(0.90_0_0)] text-center">
               Destaques
@@ -301,7 +313,7 @@ export default function Home() {
                 return (
                   <Card
                     key={index}
-                    className="p-6 hover:shadow-lg transition-shadow border border-border"
+                    className="p-6 hover:shadow-lg transition-shadow border border-border bg-background"
                   >
                     <div className="flex items-start gap-4">
                       <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
@@ -323,10 +335,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Seção Quem Somos */}
+        {/* 8. Seção Quem Somos (Branco) */}
         <section
           ref={quemSomosRef}
-          className="py-16 md:py-24 bg-primary/5 dark:bg-transparent"
+          className="py-16 md:py-24"
         >
           <div className="container">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 dark:text-[oklch(0.90_0_0)] text-center">
@@ -390,15 +402,15 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Seção Clientes */}
-        <section className="py-16 md:py-24">
+        {/* 9. Seção Clientes (Colorido) */}
+        <section className="py-16 md:py-24 bg-primary/5 dark:bg-white/5">
           <div className="container">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 dark:text-[oklch(0.90_0_0)] text-center">
               Depoimento de Clientes
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {clientes.map((cliente, index) => (
-                <Card key={index} className="p-6 border border-border">
+                <Card key={index} className="p-6 border border-border bg-background">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
                       <span className="text-primary font-bold">
@@ -431,14 +443,17 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Seção Contato */}
-        <section ref={contatoRef} className="py-16 md:py-24 bg-primary/5">
+        {/* 10. Seção Contato (Branco) */}
+        <section
+          ref={contatoRef}
+          className="py-16 md:py-24"
+        >
           <div className="container max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 dark:text-[oklch(0.90_0_0)] text-center">
               Entre em Contato
             </h2>
 
-            <Card className="p-8 border border-border">
+            <Card className="p-8 border border-border bg-background">
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
